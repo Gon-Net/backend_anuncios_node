@@ -1,0 +1,45 @@
+GET http://127.0.0.1:3000/api/publicaciones
+
+### Listar Publicaciones filtrando por categoría
+GET http://127.0.0.1:3000/api/publicaciones?categoriaId=1
+
+### Listar Publicaciones filtrando por estado
+GET http://127.0.0.1:3000/api/publicaciones?estado=publicado
+
+### Buscar Publicaciones por título
+GET http://127.0.0.1:3000/api/publicaciones?q=laptop
+
+### Listar Publicaciones combinando filtros
+GET http://127.0.0.1:3000/api/publicaciones?categoriaId=1&estado=publicado&q=laptop
+
+### Guardar Publicación
+POST http://127.0.0.1:3000/api/publicaciones
+Content-Type: application/json
+Accept: application/json
+
+{
+  "titulo": "Bicicleta aro 29",
+  "descripcion": "Bicicleta en buen estado, poco uso.",
+  "precio": 320000,
+  "moneda": "CLP",
+  "ubicacion": "Concepción",
+  "categoriaId": 1,
+  "estado": "publicado"
+}
+
+### Mostrar Publicación por ID
+GET http://127.0.0.1:3000/api/publicaciones/1
+
+### Actualizar Publicación
+PUT http://127.0.0.1:3000/api/publicaciones/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "titulo": "Laptop HP 15 pulgadas",
+  "precio": 780000,
+  "estado": "pausado"
+}
+
+### Eliminar Publicación
+DELETE http://127.0.0.1:3000/api/publicaciones/1

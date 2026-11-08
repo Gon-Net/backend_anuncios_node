@@ -1,0 +1,31 @@
+GET http://127.0.0.1:3000/api/categorias
+
+### Guardar Categoría
+POST http://127.0.0.1:3000/api/categorias
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nombre": "Inmuebles",
+  "descripcion": "residencia, perirubanos, serrania",
+  "estado": "activo",
+  "creadoEn": "2026-01-10T10:00:00.000Z",
+  "actualizadoEn": "2026-01-10T10:00:00.000Z"
+}    
+
+### Mostrar Categoría por ID
+GET http://127.0.0.1:3000/api/categorias/2  
+
+### Actualizar Categoría
+PUT http://127.0.0.1:3000/api/categorias/4
+Content-Type: application/json
+Accept: application/json        
+
+{
+  "id": 2,
+  "nombre": "Inmuebles",
+  "descripcion": "residencia, perirubanos, serrania. mar",
+  "estado": "activo",
+  "creadoEn": "2026-01-10T10:00:00.000Z",
+  "actualizadoEn": "2026-01-10T10:00:00.000Z"
+}
